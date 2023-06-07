@@ -5,7 +5,6 @@ class Cluster:
     tasks_in_queue = 0
     down_check_interval = 0
     up_next_check_interval = 0
-
     initial_instances = 3
     start_duration = 0
 
