@@ -21,20 +21,34 @@ def main (clusterConfigP,taskConfigP):
     tasks = read_task_config(taskConfigP)
     
 def read_cluster_config(file_path):
-    with open(file_path) as f:
-        config = json.load(f)
-    print(config)
-    return Cluster(**config)
+
+         try:
+        
+            with open(file_path) as f:
+                config = json.load(f)
+                return Cluster(**config)
+         except FileNotFoundError:
+            print(f'Error: JSON file {file_path} not found')
+         except json.JSONDecodeError:
+            print(f'Error: Invalid JSON file {file_path}')
+   
 
 def read_task_config(file_path):
-    with open(file_path) as f:
-        config = json.load(f)
-    tasks = []
-    for task_data in config['tasks']:
-        task = Task(**task_data)
-        tasks.append(task)
-    print(tasks)
-    return tasks
+    try:
+
+        with open(file_path) as f:
+            config = json.load(f)
+        tasks = []
+        for task_data in config['tasks']:
+            task = Task(**task_data)
+            tasks.append(task)
+        print(tasks)
+        return tasks
+    except FileNotFoundError:
+            print(f'Error: JSON file {file_path} not found')
+    except json.JSONDecodeError:
+            print(f'Error: Invalid JSON file {file_path}')
+   
 
 
 main(clusterConfigP,taskConfigP)
