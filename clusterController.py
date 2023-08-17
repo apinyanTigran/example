@@ -69,7 +69,6 @@ class Controller:
             if server.task:
                 self.registerOutput(server.task.id,server.task.task_timestamp,(server.timeWhenStartedToWork + server.task.task_duration))
 
-                print('hi')
             server.takeTask(self.taskQueue.popleft(),self.clock.time)
             print(f"server #{i+1} recived new task #{server.task.id}")
             break
