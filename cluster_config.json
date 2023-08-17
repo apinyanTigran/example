@@ -3,6 +3,7 @@
   "max_instances": 15,
   "up_check_interval": 60,
   "tasks_in_queue": 1,
+  "initial_instances": 5,
   "up_next_check_interval": 180,
   "down_check_interval": 600
 }

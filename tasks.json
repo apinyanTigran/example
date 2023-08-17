@@ -1,9 +1,14 @@
 {
   "tasks" : 
   [
-  {"id": "id1", "task_timestamp": 10, "task_duration": 100},
-  {"id": "id2", "task_timestamp": 10, "task_duration": 100},
-  {"id": "id3", "task_timestamp": 10, "task_duration": 100}
+    {"id": 1, "task_timestamp": 10, "task_duration": 100},
+    {"id": 2, "task_timestamp": 15, "task_duration": 70},
+    {"id": 3, "task_timestamp": 15, "task_duration": 340},
+    {"id": 4, "task_timestamp": 17, "task_duration": 140},
+    {"id": 5, "task_timestamp": 18, "task_duration": 540},
+    {"id": 6, "task_timestamp": 30, "task_duration": 210}
+    
+    
 
 ]
 
